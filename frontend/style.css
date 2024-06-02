@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+}
+
+h1 {
+  color: rgb(179, 131, 226);
+  font-size: 7rem;
+  text-align: center;
+  opacity: 0.4;
+}
+
+button,
+input[type=submit] {
+  border: none;
+  font-size: 1rem;
+  line-height: 1rem;
+  cursor: pointer;
+  color: black;
+  font-weight: 400;
+}
+
+#newTodo,
+#searchBtn,
+#confirm {
+  border: 5px solid rgba(179, 131, 226, 0.4);
+  background-color: transparent;
+}
+
+#newTodo:hover,
+#searchBtn:hover,
+#confirm:hover {
+  background-color: rgba(179, 131, 226, 0.4);
+  border: none;
+}
+
+button,
+#searchBtn {
+  border-radius: 10px;
+  line-height: 2rem;
+}
+
+#newTodo {
+  width: 7rem;
+  height: 3.5rem;
+}
+
+#searchBtn {
+  width: 6rem;
+  height: 3.5rem;
+}
+
+#confirm {
+  padding: 1rem 2rem;
+  width: 100%;
+  text-align: left;
+}
+
+.operationBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* max-width: 100%;
+  width: 400px; */
+}
+
+#searchForm {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+#search {
+  width: 100%;
+}
+
+#newTodoForm {
+  margin-bottom: 50px;
+  display: none;
+}
+
+#newTodoForm.show,
+.save.show,
+.edit.show {
+  display: block;
+}
+
+.input[type=text] {
+  border: none;
+  color: #444;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  display: block;
+  height: 3.5rem;
+}
+
+#newTodoForm input {
+  width: 100%;
+}
+
+.input::placeholder {
+  color: #d5d5d5;
+}
+
+.input:focus {
+  outline-color: rgb(179, 131, 226);
+}
+
+.todoList {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 50px;
+  list-style-type: none;
+}
+
+.todoList li {
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.todoList li div {
+  display: flex;
+}
+
+.todoList li .date {
+  width: 4rem;
+  align-items: center;
+}
+
+.todoList li form input[type=text] {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+.todoList li form input[type=text]:disabled {
+  color: black;
+  opacity: 1;
+}
+
+.edit,
+.delete,
+.save {
+  border-radius: 10px;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  margin-left: 0.5rem;
+  background-color: rgba(179, 131, 226, 0.4);
+}
+
+.delete {
+  background-color: coral;
+}
+
+.todoList li form .save {
+  position: absolute;
+  right: 5rem;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.save,
+.edit {
+  display: none;
+}
+
+.todoList li form .listTitle {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.todoList li form .listDescription {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.todoList li form .listTitle.completed {
+  color: #b6b6b6;
+  text-decoration: line-through;
+}
+
+small {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+small,
+.listDescription {
+  color: #b5b5b5;
+}
+
+
+@media (max-width:600px) {
+  .todoList li {
+    padding: 1rem;
+  }
+
+  #search {
+    padding: 1rem;
+  }
+
+  .todoList li form input[type=text] {
+    width: 80%;
+  }
+
+  .todoList li form .save {
+    right: 4rem;
+  }
+}
